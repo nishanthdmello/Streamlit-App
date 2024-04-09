@@ -5,7 +5,7 @@ import pandas as pd
 
 def test_internet_speed():
     st = speedtest.Speedtest()
-    st.get_best_server()
+    # st.get_best_server()
     download_speed = st.download() /8e6
     upload_speed = st.upload() /8e6  
     ping = st.results.ping
@@ -16,6 +16,7 @@ def test_internet_speed():
 
 if __name__ == "__main__":
 
+    st.write("Press the GO! button and wait for some time to see you network speed!")
     col1, col2, col3 = st.columns(3)
     with col2:
         but=st.button("GO!",use_container_width=True)
